@@ -50,8 +50,8 @@ def get_smallest(number_list):
     """
     smallest_number = number_list[0]
     for i in range(len(number_list)):
-        if greatest_number > number_list[i]:
-            greatest_number = number_list[i]
+        if smallest_number > number_list[i]:
+            smallest_number = number_list[i]
     return smallest_number
 
 
@@ -101,7 +101,7 @@ def get_median(number_list):
     """
     number_list.sort()
     if len(number_list) % 2 == 0:
-        median = (number_list[len(number_list)/2]+number_list[len(number_list)/2+1]) / 2
+        median = (number_list[len(number_list)//2]+number_list[len(number_list)//2+1]) / 2
     else:
         median = number_list[len(number_list)//2+1]
     return median
